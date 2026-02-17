@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    /* Account for fixed navbar height (20 * 4px = 80px) */
+  }
+
+  body {
+    @apply bg-zinc-50 text-zinc-900;
+  }
+}
