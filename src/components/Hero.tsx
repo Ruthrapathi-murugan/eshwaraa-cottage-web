@@ -1,23 +1,50 @@
-
-import { motion } from 'framer-motion';
-import roomImage from '../assets/room1.jpg';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
+import roomImage from '../assets/room1.jpg';
+import img1 from '../assets/WhatsApp Image 2026-02-14 at 1.02.15 PM.jpeg';
+import img2 from '../assets/WhatsApp Image 2026-02-14 at 1.02.24 PM.jpeg';
+import img3 from '../assets/WhatsApp Image 2026-02-14 at 1.02.30 PM.jpeg';
+import img4 from '../assets/WhatsApp Image 2026-02-14 at 1.02.46 PM.jpeg';
+import img5 from '../assets/WhatsApp Image 2026-02-14 at 1.02.47 PM.jpeg';
+import img6 from '../assets/WhatsApp Image 2026-02-16 at 4.26.24 PM.jpeg';
+import img7 from '../assets/WhatsApp Image 2026-02-16 at 4.26.25 PM.jpeg';
+
+const images = [roomImage, img1, img2, img3, img4, img5, img6, img7];
+
 const Hero = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={roomImage}
-                    alt="Eshwaraa Cottage Room"
-                    className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/40" />
+                <AnimatePresence>
+                    <motion.img
+                        key={currentIndex}
+                        src={images[currentIndex]}
+                        alt="Eshwaraa Cottage Room"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                </AnimatePresence>
+                <div className="absolute inset-0 bg-black/40 z-10" />
             </div>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
                 <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

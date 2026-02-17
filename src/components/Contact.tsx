@@ -49,6 +49,10 @@ const Contact = () => {
                                     <a href="tel:+919150921505" className="hover:text-accent transition-colors">
                                         +91 91509 21505
                                     </a>
+                                    <br />
+                                    <a href="tel:+917806995499" className="hover:text-accent transition-colors">
+                                        +91 78069 95499
+                                    </a>
                                 </p>
                             </div>
                         </motion.div>
