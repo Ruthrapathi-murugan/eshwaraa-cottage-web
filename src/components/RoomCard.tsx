@@ -45,9 +45,9 @@ const RoomCard: React.FC<RoomCardProps> = ({ title, price, image, features, isAc
                     ))}
                 </div>
 
-                <button className="w-full bg-zinc-900 text-white py-3 rounded-xl font-medium hover:bg-zinc-800 transition-colors flex justify-center items-center gap-2">
+                <a href="tel:+919150921505" className="w-full bg-zinc-900 text-white py-3 rounded-xl font-medium hover:bg-zinc-800 transition-colors flex justify-center items-center gap-2">
                     <Phone size={18} /> Book via Phone
-                </button>
+                </a>
             </div>
         </motion.div>
     );
