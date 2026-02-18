@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Logo from '../assets/final_logo.PNG';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +28,9 @@ const Navbar = () => {
         <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
-                    <div className="flex-shrink-0 flex items-center">
-                        <h1 className="text-2xl font-serif font-bold text-zinc-900">
+                    <div className="flex-shrink-0 flex items-center gap-3">
+                        <img src={Logo} alt="Eshwaraa Cottage" className="h-12 w-auto object-contain" />
+                        <h1 className="text-2xl font-serif font-bold text-zinc-900 hidden sm:block">
                             <span className="text-accent">Eshwaraa</span> Cottage
                         </h1>
                     </div>
