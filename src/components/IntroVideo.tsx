@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { X, Volume2, VolumeX } from 'lucide-react';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import videoSource from '../assets/enter video.mp4';
 
 interface IntroVideoProps {
