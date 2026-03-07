@@ -54,13 +54,13 @@ const Navbar = () => {
                             >
                                 Photos
                             </Link>
-                            <a
-                                href="tel:+919150921505"
+                            <button
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-book-modal'))}
                                 className="bg-zinc-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-zinc-800 transition-colors flex items-center gap-2"
                             >
                                 <Phone size={16} />
                                 Book Now
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -102,14 +102,16 @@ const Navbar = () => {
                             >
                                 Photos
                             </Link>
-                            <a
-                                href="tel:+919150921505"
-                                onClick={() => setIsOpen(false)}
+                            <button
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    window.dispatchEvent(new CustomEvent('open-book-modal'));
+                                }}
                                 className="w-full text-center mt-4 bg-zinc-900 text-white px-4 py-3 rounded-md text-base font-medium hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2"
                             >
                                 <Phone size={18} />
-                                Call to Book
-                            </a>
+                                Book Now
+                            </button>
                         </div>
                     </motion.div>
                 )}

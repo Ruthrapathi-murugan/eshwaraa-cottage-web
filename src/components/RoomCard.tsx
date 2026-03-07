@@ -45,9 +45,12 @@ const RoomCard: React.FC<RoomCardProps> = ({ title, price, image, features, isAc
                     ))}
                 </div>
 
-                <a href="tel:+919150921505" className="w-full bg-zinc-900 text-white py-3 rounded-xl font-medium hover:bg-zinc-800 transition-colors flex justify-center items-center gap-2">
-                    <Phone size={18} /> Book via Phone
-                </a>
+                <button
+                    onClick={() => window.dispatchEvent(new CustomEvent('open-book-modal'))}
+                    className="w-full bg-zinc-900 text-white py-3 rounded-xl font-medium hover:bg-zinc-800 transition-colors flex justify-center items-center gap-2"
+                >
+                    <Phone size={18} /> Book Now
+                </button>
             </div>
         </motion.div>
     );

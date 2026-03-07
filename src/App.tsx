@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Photos from './components/Photos';
 import Footer from './components/Footer';
 import IntroVideo from './components/IntroVideo';
+import BookNowModal from './components/BookNowModal';
 
 function App() {
   const [showIntro, setShowIntro] = useState(() => {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/photos" element={<Photos />} />
       </Routes>
       <Footer />
+      <BookNowModal />
     </div>
   );
 }
