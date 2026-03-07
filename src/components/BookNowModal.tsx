@@ -10,7 +10,7 @@ const bookingOptions = [
     },
     {
         name: 'Agoda',
-        link: 'https://www.booking.com/Share-nvdFoNC',
+        link: 'https://www.agoda.com/en-in/eshwaraa-cottage/hotel/all/palani-in.html?countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=1922885&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-03-8&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&tag=6f147157-60b8-459f-af1a-9935d44970e9&flightSearchCriteria=%5Bobject+Object%5D&los=1&searchrequestid=b21872b9-ead5-4a71-9717-6f27f4998ff9&ds=J8gki4Zh%2BlUCLf3V',
         color: '#5392F9'
     },
     {
